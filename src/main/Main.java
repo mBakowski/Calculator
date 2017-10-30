@@ -17,6 +17,7 @@ public class Main extends javax.swing.JFrame {
     public Main() {
         initComponents();
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -63,14 +64,29 @@ public class Main extends javax.swing.JFrame {
         buttonGroup1.add(onRadioButton);
         onRadioButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         onRadioButton.setText("ON");
+        onRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                onRadioButtonActionPerformed(evt);
+            }
+        });
 
         buttonGroup1.add(offRadioButton);
         offRadioButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         offRadioButton.setText("OFF");
+        offRadioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                offRadioButtonActionPerformed(evt);
+            }
+        });
 
         consumeButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         consumeButton.setText("C");
         consumeButton.setToolTipText("");
+        consumeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                consumeButtonActionPerformed(evt);
+            }
+        });
 
         divisionButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         divisionButton.setText("/");
@@ -371,6 +387,41 @@ public class Main extends javax.swing.JFrame {
         textField.setText(textField.getText() + ".");
     }//GEN-LAST:event_commaButtonActionPerformed
 
+    private void offRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offRadioButtonActionPerformed
+        enableRadioButton(false);
+    }//GEN-LAST:event_offRadioButtonActionPerformed
+
+    private void onRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_onRadioButtonActionPerformed
+        enableRadioButton(true);
+    }//GEN-LAST:event_onRadioButtonActionPerformed
+
+    private void consumeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consumeButtonActionPerformed
+        textField.setText("");
+    }//GEN-LAST:event_consumeButtonActionPerformed
+    //
+    public void enableRadioButton(boolean enable)
+    {
+        textField.setEnabled(enable);
+        
+        buttonNr0.setEnabled(enable);
+        buttonNr1.setEnabled(enable);
+        buttonNr2.setEnabled(enable);
+        buttonNr3.setEnabled(enable);
+        buttonNr4.setEnabled(enable);
+        buttonNr5.setEnabled(enable);
+        buttonNr6.setEnabled(enable);
+        buttonNr7.setEnabled(enable);
+        buttonNr8.setEnabled(enable);
+        buttonNr9.setEnabled(enable);
+        additionButton.setEnabled(enable);
+        subtractionButton.setEnabled(enable);
+        multiplicationButton.setEnabled(enable);
+        divisionButton.setEnabled(enable);
+        commaButton.setEnabled(enable);
+        scoreButton.setEnabled(enable);
+        consumeButton.setEnabled(enable);
+        deleteButton.setEnabled(enable);
+    }
     /**
      * @param args the command line arguments
      */
