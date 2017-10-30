@@ -193,6 +193,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="/"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="divisionButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="deleteButton">
       <Properties>
@@ -222,6 +225,9 @@
         <Property name="text" type="java.lang.String" value="*"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="multiplicationButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr9">
       <Properties>
@@ -231,6 +237,9 @@
         <Property name="text" type="java.lang.String" value="9"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr9ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr8">
       <Properties>
@@ -240,6 +249,9 @@
         <Property name="text" type="java.lang.String" value="8"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr8ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr4">
       <Properties>
@@ -249,6 +261,9 @@
         <Property name="text" type="java.lang.String" value="4"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr4ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="subtractionButton">
       <Properties>
@@ -258,6 +273,9 @@
         <Property name="text" type="java.lang.String" value="-"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="subtractionButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr6">
       <Properties>
@@ -267,6 +285,9 @@
         <Property name="text" type="java.lang.String" value="6"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr6ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr5">
       <Properties>
@@ -276,6 +297,9 @@
         <Property name="text" type="java.lang.String" value="5"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr5ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr1">
       <Properties>
@@ -285,6 +309,9 @@
         <Property name="text" type="java.lang.String" value="1"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr1ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="additionButton">
       <Properties>
@@ -294,6 +321,9 @@
         <Property name="text" type="java.lang.String" value="+"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="additionButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr3">
       <Properties>
@@ -303,6 +333,9 @@
         <Property name="text" type="java.lang.String" value="3"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr3ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="buttonNr2">
       <Properties>
@@ -312,6 +345,9 @@
         <Property name="text" type="java.lang.String" value="2"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr2ActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="commaButton">
       <Properties>
@@ -321,6 +357,9 @@
         <Property name="text" type="java.lang.String" value=","/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="commaButtonActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="scoreButton">
       <Properties>
@@ -339,6 +378,9 @@
         <Property name="text" type="java.lang.String" value="0"/>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonNr0ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

@@ -74,6 +74,11 @@ public class Main extends javax.swing.JFrame {
 
         divisionButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         divisionButton.setText("/");
+        divisionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                divisionButtonActionPerformed(evt);
+            }
+        });
 
         deleteButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         deleteButton.setText("<--");
@@ -90,50 +95,110 @@ public class Main extends javax.swing.JFrame {
         multiplicationButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         multiplicationButton.setText("*");
         multiplicationButton.setToolTipText("");
+        multiplicationButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                multiplicationButtonActionPerformed(evt);
+            }
+        });
 
         buttonNr9.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr9.setText("9");
         buttonNr9.setToolTipText("");
+        buttonNr9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr9ActionPerformed(evt);
+            }
+        });
 
         buttonNr8.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr8.setText("8");
         buttonNr8.setToolTipText("");
+        buttonNr8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr8ActionPerformed(evt);
+            }
+        });
 
         buttonNr4.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr4.setText("4");
         buttonNr4.setToolTipText("");
+        buttonNr4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr4ActionPerformed(evt);
+            }
+        });
 
         subtractionButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         subtractionButton.setText("-");
         subtractionButton.setToolTipText("");
+        subtractionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                subtractionButtonActionPerformed(evt);
+            }
+        });
 
         buttonNr6.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr6.setText("6");
         buttonNr6.setToolTipText("");
+        buttonNr6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr6ActionPerformed(evt);
+            }
+        });
 
         buttonNr5.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr5.setText("5");
         buttonNr5.setToolTipText("");
+        buttonNr5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr5ActionPerformed(evt);
+            }
+        });
 
         buttonNr1.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr1.setText("1");
         buttonNr1.setToolTipText("");
+        buttonNr1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr1ActionPerformed(evt);
+            }
+        });
 
         additionButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         additionButton.setText("+");
         additionButton.setToolTipText("");
+        additionButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                additionButtonActionPerformed(evt);
+            }
+        });
 
         buttonNr3.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr3.setText("3");
         buttonNr3.setToolTipText("");
+        buttonNr3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr3ActionPerformed(evt);
+            }
+        });
 
         buttonNr2.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr2.setText("2");
         buttonNr2.setToolTipText("");
+        buttonNr2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr2ActionPerformed(evt);
+            }
+        });
 
         commaButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         commaButton.setText(",");
         commaButton.setToolTipText("");
+        commaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                commaButtonActionPerformed(evt);
+            }
+        });
 
         scoreButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         scoreButton.setText("=");
@@ -142,6 +207,11 @@ public class Main extends javax.swing.JFrame {
         buttonNr0.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr0.setText("0");
         buttonNr0.setToolTipText("");
+        buttonNr0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonNr0ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -241,8 +311,65 @@ public class Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void buttonNr7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr7ActionPerformed
-
+        textField.setText(textField.getText() + "7");
     }//GEN-LAST:event_buttonNr7ActionPerformed
+
+    private void buttonNr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr1ActionPerformed
+        textField.setText(textField.getText() + "1");
+        
+    }//GEN-LAST:event_buttonNr1ActionPerformed
+
+    private void buttonNr2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr2ActionPerformed
+        textField.setText(textField.getText() + "2");
+    }//GEN-LAST:event_buttonNr2ActionPerformed
+
+    private void buttonNr3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr3ActionPerformed
+        textField.setText(textField.getText() + "3");
+    }//GEN-LAST:event_buttonNr3ActionPerformed
+
+    private void buttonNr4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr4ActionPerformed
+        textField.setText(textField.getText() + "4");
+    }//GEN-LAST:event_buttonNr4ActionPerformed
+
+    private void buttonNr5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr5ActionPerformed
+        textField.setText(textField.getText() + "5");
+    }//GEN-LAST:event_buttonNr5ActionPerformed
+
+    private void buttonNr6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr6ActionPerformed
+        textField.setText(textField.getText() + "6");
+    }//GEN-LAST:event_buttonNr6ActionPerformed
+
+    private void buttonNr8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr8ActionPerformed
+        textField.setText(textField.getText() + "8");
+    }//GEN-LAST:event_buttonNr8ActionPerformed
+
+    private void buttonNr9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr9ActionPerformed
+        textField.setText(textField.getText() + "9");
+    }//GEN-LAST:event_buttonNr9ActionPerformed
+
+    private void buttonNr0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr0ActionPerformed
+        textField.setText(textField.getText() + "0");
+    }//GEN-LAST:event_buttonNr0ActionPerformed
+
+    private void additionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionButtonActionPerformed
+        textField.setText(textField.getText() + "+");
+    }//GEN-LAST:event_additionButtonActionPerformed
+
+    private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
+        textField.setText(textField.getText() + "-");
+    }//GEN-LAST:event_subtractionButtonActionPerformed
+
+    private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
+        textField.setText(textField.getText() + "*");
+    }//GEN-LAST:event_multiplicationButtonActionPerformed
+
+    private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
+        textField.setText(textField.getText() + "/");
+    }//GEN-LAST:event_divisionButtonActionPerformed
+
+    private void commaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commaButtonActionPerformed
+        textField.setText(textField.getText() + ".");
+    }//GEN-LAST:event_commaButtonActionPerformed
 
     /**
      * @param args the command line arguments
