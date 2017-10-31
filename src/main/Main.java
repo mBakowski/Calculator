@@ -224,6 +224,11 @@ public class Main extends javax.swing.JFrame {
         scoreButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         scoreButton.setText("=");
         scoreButton.setToolTipText("");
+        scoreButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                scoreButtonActionPerformed(evt);
+            }
+        });
 
         buttonNr0.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr0.setText("0");
@@ -373,19 +378,27 @@ public class Main extends javax.swing.JFrame {
     }//GEN-LAST:event_buttonNr0ActionPerformed
 
     private void additionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_additionButtonActionPerformed
-        textField.setText(textField.getText() + "+");
+        number = Double.parseDouble(textField.getText());
+        choice = 1;
+        textField.setText("");
     }//GEN-LAST:event_additionButtonActionPerformed
 
     private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
-        textField.setText(textField.getText() + "-");
+        number = Double.parseDouble(textField.getText());
+        choice = 2;
+        textField.setText("");
     }//GEN-LAST:event_subtractionButtonActionPerformed
 
     private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
-        textField.setText(textField.getText() + "*");
+        number = Double.parseDouble(textField.getText());
+        choice = 3;
+        textField.setText("");
     }//GEN-LAST:event_multiplicationButtonActionPerformed
 
     private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
-        textField.setText(textField.getText() + "/");
+        number = Double.parseDouble(textField.getText());
+        choice = 1;
+        textField.setText("");
     }//GEN-LAST:event_divisionButtonActionPerformed
 
     private void commaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commaButtonActionPerformed
@@ -415,6 +428,10 @@ public class Main extends javax.swing.JFrame {
             textField.setText(text.toString());
         }
     }//GEN-LAST:event_deleteButtonActionPerformed
+
+    private void scoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scoreButtonActionPerformed
+        calculation();
+    }//GEN-LAST:event_scoreButtonActionPerformed
     //
     public void enableRadioButton(boolean enable)
     {
@@ -438,6 +455,30 @@ public class Main extends javax.swing.JFrame {
         scoreButton.setEnabled(enable);
         consumeButton.setEnabled(enable);
         deleteButton.setEnabled(enable);
+    }
+    private int choice;
+    private double answer, number;
+    public void calculation()
+    {
+        switch(choice)
+        {
+            case 1:
+                answer = number + Double.parseDouble(textField.getText());
+                textField.setText(Double.toString(answer));
+                break;
+            case 2:
+                answer = number - Double.parseDouble(textField.getText());
+                textField.setText(Double.toString(answer));
+                break;
+            case 3:
+                answer = number * Double.parseDouble(textField.getText());
+                textField.setText(Double.toString(answer));
+                break;
+            case 4:
+                answer = number / Double.parseDouble(textField.getText());
+                textField.setText(Double.toString(answer));
+                break;
+        }
     }
     /**
      * @param args the command line arguments
