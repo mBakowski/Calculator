@@ -50,6 +50,7 @@ public class Main extends javax.swing.JFrame {
         commaButton = new javax.swing.JButton();
         scoreButton = new javax.swing.JButton();
         buttonNr0 = new javax.swing.JButton();
+        helpLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Calculator");
@@ -239,6 +240,9 @@ public class Main extends javax.swing.JFrame {
             }
         });
 
+        helpLabel.setForeground(new java.awt.Color(255, 0, 0));
+        helpLabel.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -289,13 +293,15 @@ public class Main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(buttonNr0, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(scoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(scoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(helpLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addComponent(helpLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(textField, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -330,7 +336,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(scoreButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonNr0, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(commaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
@@ -342,7 +348,6 @@ public class Main extends javax.swing.JFrame {
 
     private void buttonNr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr1ActionPerformed
         textField.setText(textField.getText() + "1");
-        
     }//GEN-LAST:event_buttonNr1ActionPerformed
 
     private void buttonNr2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonNr2ActionPerformed
@@ -381,24 +386,28 @@ public class Main extends javax.swing.JFrame {
         number = Double.parseDouble(textField.getText());
         choice = 1;
         textField.setText("");
+        helpLabel.setText(number + "+");
     }//GEN-LAST:event_additionButtonActionPerformed
 
     private void subtractionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_subtractionButtonActionPerformed
         number = Double.parseDouble(textField.getText());
         choice = 2;
         textField.setText("");
+        helpLabel.setText(number + "-");
     }//GEN-LAST:event_subtractionButtonActionPerformed
 
     private void multiplicationButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_multiplicationButtonActionPerformed
         number = Double.parseDouble(textField.getText());
         choice = 3;
         textField.setText("");
+        helpLabel.setText(number + "*");
     }//GEN-LAST:event_multiplicationButtonActionPerformed
 
     private void divisionButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_divisionButtonActionPerformed
         number = Double.parseDouble(textField.getText());
-        choice = 1;
+        choice = 4;
         textField.setText("");
+        helpLabel.setText(number + "/");
     }//GEN-LAST:event_divisionButtonActionPerformed
 
     private void commaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_commaButtonActionPerformed
@@ -415,6 +424,7 @@ public class Main extends javax.swing.JFrame {
 
     private void consumeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consumeButtonActionPerformed
         textField.setText("");
+        helpLabel.setText("");
     }//GEN-LAST:event_consumeButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
@@ -431,6 +441,7 @@ public class Main extends javax.swing.JFrame {
 
     private void scoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scoreButtonActionPerformed
         calculation();
+        helpLabel.setText("");
     }//GEN-LAST:event_scoreButtonActionPerformed
     //
     public void enableRadioButton(boolean enable)
@@ -456,8 +467,10 @@ public class Main extends javax.swing.JFrame {
         consumeButton.setEnabled(enable);
         deleteButton.setEnabled(enable);
     }
+    
     private int choice;
     private double answer, number;
+    //main math logic method
     public void calculation()
     {
         switch(choice)
@@ -532,6 +545,7 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton consumeButton;
     private javax.swing.JButton deleteButton;
     private javax.swing.JButton divisionButton;
+    private javax.swing.JLabel helpLabel;
     private javax.swing.JButton multiplicationButton;
     private javax.swing.JRadioButton offRadioButton;
     private javax.swing.JRadioButton onRadioButton;
