@@ -98,6 +98,11 @@ public class Main extends javax.swing.JFrame {
 
         deleteButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         deleteButton.setText("<--");
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteButtonActionPerformed(evt);
+            }
+        });
 
         buttonNr7.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         buttonNr7.setText("7");
@@ -398,11 +403,23 @@ public class Main extends javax.swing.JFrame {
     private void consumeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consumeButtonActionPerformed
         textField.setText("");
     }//GEN-LAST:event_consumeButtonActionPerformed
+
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
+        if(textField.getText().length()>0)
+        {
+            int position = textField.getText().length()-1;
+            
+            StringBuilder text;
+            text = new StringBuilder(textField.getText());
+            text.deleteCharAt(position);
+            textField.setText(text.toString());
+        }
+    }//GEN-LAST:event_deleteButtonActionPerformed
     //
     public void enableRadioButton(boolean enable)
     {
         textField.setEnabled(enable);
-        
+
         buttonNr0.setEnabled(enable);
         buttonNr1.setEnabled(enable);
         buttonNr2.setEnabled(enable);
