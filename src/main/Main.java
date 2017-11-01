@@ -5,6 +5,8 @@
  */
 package main;
 
+import java.awt.TextField;
+
 /**
  *
  * @author micha
@@ -225,6 +227,11 @@ public class Main extends javax.swing.JFrame {
         scoreButton.setFont(new java.awt.Font("Verdana", 1, 11)); // NOI18N
         scoreButton.setText("=");
         scoreButton.setToolTipText("");
+        scoreButton.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusLost(java.awt.event.FocusEvent evt) {
+                scoreButtonFocusLost(evt);
+            }
+        });
         scoreButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 scoreButtonActionPerformed(evt);
@@ -425,6 +432,8 @@ public class Main extends javax.swing.JFrame {
     private void consumeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_consumeButtonActionPerformed
         textField.setText("");
         helpLabel.setText("");
+        
+        
     }//GEN-LAST:event_consumeButtonActionPerformed
 
     private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
@@ -441,8 +450,12 @@ public class Main extends javax.swing.JFrame {
 
     private void scoreButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_scoreButtonActionPerformed
         calculation();
-        helpLabel.setText("");
+        helpLabel.setText("");        
     }//GEN-LAST:event_scoreButtonActionPerformed
+
+    private void scoreButtonFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_scoreButtonFocusLost
+        textField.setText("");
+    }//GEN-LAST:event_scoreButtonFocusLost
     //
     public void enableRadioButton(boolean enable)
     {
